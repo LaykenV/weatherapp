@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <title>Weather Forecast</title>
+</head>
+<body>
+    <div class="container">
+        <div class="searchside">
+            <h1> <img src="../src/img/sunnn.png" alt="">
+                Current Weather</h1>
+            <form action="" onsubmit="return false">
+                <input id="cityinput" type="text" placeholder="Enter City" required>
+                <button type="submit" id="btn">Search</button>
+            </form>
+        </div>
+        <div class="displayside">
+            <h2></h2>
+            <div class="temppic">
+                <h3></h3>
+                <img id="weatherpic" src="" alt="">
+            </div>
+            <p class="weatherd"></p>
+            <div class="highlowtemp">
+                <p class="hightemp"></p>
+                <p class="lowtemp"></p>
+            </div>
+            <div class="bottominfo">
+                <p class="feelslike"></p>
+                <p class="humidity"></p>
+            </div>
+            <div class="tempselector">
+                <span class="celcius">C </span>
+                <span class="farenheit"> F</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

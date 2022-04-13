@@ -20,7 +20,7 @@ submitBtn.addEventListener("click", function(event) {
 async function getWeather(input) {
     if (input.value !== "" && input.value !== undefined) {
         const inp = input.value;
-        const response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${inp}&limit=1&appid=7cca887bcacb1085e8fd6421b8128128`, {mode: 'cors'});
+        const response = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${inp}&limit=1&appid=7cca887bcacb1085e8fd6421b8128128`, {mode: 'cors'});
         const cordsData = await response.json();
         const lonCord = await cordsData[0].lon;
         const latCord = await cordsData[0].lat;
@@ -35,13 +35,13 @@ async function getWeather(input) {
         let tempMin = Math.round(weatherData.main.temp_min);
         const weatherM = weatherData.weather[0].main;
         if (weatherM == "Rain") {
-            weatherPic.src = "../src/img/rain.png";
+            weatherPic.src = "./img/rain.png";
         }
         if (weatherM == "Clouds") {
-            weatherPic.src = "../src/img/cloudy.png";
+            weatherPic.src = "./img/cloudy.png";
         }
         if (weatherM == "Clear") {
-            weatherPic.src = "../src/img/clear.png";
+            weatherPic.src = "./img/clear.png";
         }
         const country = weatherData.sys.country;
         if (celciusBtn.style.backgroundColor == "honeydew") {

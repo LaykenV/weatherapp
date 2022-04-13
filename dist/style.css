@@ -126,6 +126,10 @@ img[src=""] {
     width: 5rem;
 }
 
+#btn, .tempselector {
+    cursor: pointer;
+}
+
 @media only screen and (min-width: 800px) {
     .container {
         width: 24%;
